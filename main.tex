@@ -1,0 +1,688 @@
+% !TeX encoding = UTF-8
+% !TeX program = tectonic
+%
+% Supply Chain Management: An International Journal (SCMIJ)
+% Emerald Publishing — article + emerald-harvard template
+%
+% NOTE: Emerald's official emerald.cls is not publicly redistributable.
+% This template uses the standard article class with formatting closely
+% following Emerald's submission guidelines. Before final submission,
+% download emerald.cls from Emerald Author Services.
+%
+\documentclass[12pt,a4paper,twoside]{article}
+
+% ============================================================
+% Encoding and fonts
+% ============================================================
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}           % Times New Roman clone
+\usepackage{helvet}             % Helvetica sans-serif
+\usepackage{courier}            % Courier monospace
+
+% ============================================================
+% Page geometry (Emerald guidelines: generous margins)
+% ============================================================
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+% ============================================================
+% Spacing (double-spaced for initial submission)
+% ============================================================
+\usepackage{setspace}
+\doublespacing
+
+% ============================================================
+% Citation and bibliography (Harvard author-year style)
+% ============================================================
+\usepackage[authoryear,round,comma,sort&compress]{natbib}
+\bibliographystyle{apa}
+
+% ============================================================
+% Mathematics
+% ============================================================
+\usepackage{amsmath,amssymb,amsfonts}
+
+% ============================================================
+% Tables and figures
+% ============================================================
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[font={small,it},labelfont=bf]{caption}
+
+% ============================================================
+% Hyperlinks
+% ============================================================
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% ============================================================
+% Section formatting
+% ============================================================
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\fontsize{14}{16}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\fontsize{13}{14}\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{12}{14}\bfseries\itshape}{\thesubsubsection}{1em}{}
+
+% ============================================================
+% Abstract environment
+% ============================================================
+\renewenvironment{abstract}
+  {\small\bfseries\noindent Abstract\par\small\itshape}
+  {\par\medskip}
+
+% ============================================================
+% Document metadata
+% ============================================================
+\title{\bfseries Sustainable Supply Chain Resilience in Cross-Border Contexts:\\[2mm]
+       \large A Multi-Stakeholder Perspective on Risk Management and Circular Economy Integration}
+
+\author{%
+  Ming Li\textsuperscript{1*},
+  Sarah J.~Thompson\textsuperscript{2},
+  Wei Chen\textsuperscript{1}
+  \\[2mm]
+  \textsuperscript{1}School of Management, Sun Yat-sen University, Guangzhou 510275, China\\
+  \textsuperscript{2}Centre for Logistics and Supply Chain Management, Cranfield University, Cranfield MK43 0AL, UK\\[2mm]
+  \textsuperscript{*}\textit{Corresponding author. Email: liming@mail.sysu.edu.cn}
+}
+
+\date{}
+
+% ============================================================
+\begin{document}
+
+\maketitle
+
+% ---------- Abstract ----------
+\begin{abstract}
+The increasing complexity of cross-border supply chains, coupled with the growing
+urgency of sustainability imperatives, demands a fundamental reconceptualization
+of supply chain resilience. This paper develops an integrated framework that
+synthesizes sustainable supply chain management (SSCM) with resilience theory
+and circular economy principles in the context of cross-border operations.
+Drawing on a multi-stakeholder case study methodology involving 12 multinational
+enterprises operating across Asia--Europe and Asia--North America trade corridors,
+we identify four critical capabilities for sustainable cross-border resilience:
+(1) multi-tier visibility and traceability, (2) adaptive circular sourcing,
+(3) collaborative risk governance across institutional boundaries, and
+(4) digital-enabled ecosystem orchestration. Our findings reveal that firms with
+higher levels of sustainable supply chain maturity are significantly better
+equipped to absorb disruptions while maintaining both economic and environmental
+performance. The study contributes to the supply chain management literature by
+extending resilience theory to incorporate sustainability dimensions in
+cross-border settings, and by providing a practical maturity model for managers
+navigating the twin challenges of sustainability and resilience in global
+supply networks.
+\end{abstract}
+
+\vspace{2mm}
+\noindent\textbf{Keywords:} Sustainable supply chain management; Supply chain
+resilience; Cross-border supply chains; Circular economy; Risk governance;
+Multi-stakeholder collaboration
+
+% ============================================================
+\section{Introduction}
+\label{sec:introduction}
+
+Global supply chains are confronting an unprecedented confluence of disruptions
+--- from geopolitical tensions and trade policy volatility to climate-induced
+extreme weather events and public health emergencies
+\citep{ivanov2019global, pettit2019resilience}.  Simultaneously, stakeholder
+pressure for environmental and social sustainability has moved from the
+periphery to the core of corporate strategy, reshaping how supply chains are
+designed, governed, and operated \citep{carter2008framework, seuring2013review}.
+
+The intersection of these two imperatives --- resilience and sustainability ---
+is particularly acute in cross-border supply chains, where firms must navigate
+heterogeneous regulatory environments, diverse cultural norms, and complex
+multi-tier supplier networks that span multiple jurisdictions
+\citep{wieland2021two}.  Recent disruptions, including the COVID-19 pandemic,
+the blockage of the Suez Canal, and ongoing trade tensions between major
+economies, have exposed the fragility of globally dispersed, lean-optimized
+supply networks \citep{paul2021supply, queiroz2022impacts}.
+
+While the supply chain management literature has separately addressed resilience
+\citep{hohenstein2015research, kamalahmadi2016review} and sustainability
+\citep{brandenburg2014quantitative, dubey2017sustainable}, there remains a
+significant gap in understanding how these two paradigms interact and can be
+mutually reinforcing in cross-border contexts.  Existing frameworks tend to
+treat resilience and sustainability as parallel or even competing objectives,
+rather than as potentially synergistic dimensions of supply chain design
+\citep{fahimnia2015quantitative, negri2021integrating}.
+
+This study addresses this gap by investigating the following research questions:
+
+\begin{enumerate}
+  \item How can sustainable supply chain management (SSCM) practices enhance
+        resilience in cross-border supply networks?
+  \item What are the critical capabilities that enable firms to simultaneously
+        pursue sustainability and resilience objectives across national
+        boundaries?
+  \item How do institutional differences between countries moderate the
+        relationship between SSCM and resilience?
+\end{enumerate}
+
+We adopt a multi-stakeholder case study approach involving 12 multinational
+enterprises (MNEs) operating across two major trade corridors:
+Asia--Europe and Asia--North America.  This comparative design allows us to
+examine how institutional and cultural differences shape the
+sustainability--resilience nexus in cross-border supply chains.
+
+Our study makes three principal contributions.  First, we develop an integrated
+conceptual framework that identifies four critical capabilities for sustainable
+cross-border resilience.  Second, we extend resilience theory by incorporating
+circular economy principles as resilience-building mechanisms.  Third, we
+provide a practical maturity model that helps managers assess and develop their
+organizations' capacity for sustainable supply chain resilience.
+
+The remainder of this paper is organized as follows.  Section~\ref{sec:literature}
+reviews the literature on SSCM, supply chain resilience, and cross-border
+operations.  Section~\ref{sec:methodology} describes our research methodology.
+Section~\ref{sec:findings} presents the case study findings organized around the
+four capability dimensions.  Section~\ref{sec:framework} synthesizes the findings
+into an integrated framework.  Section~\ref{sec:discussion} discusses theoretical
+and practical implications, and Section~\ref{sec:conclusion} concludes with
+limitations and future research directions.
+
+% ============================================================
+\section{Literature Review}
+\label{sec:literature}
+
+\subsection{Sustainable Supply Chain Management}
+
+Sustainable supply chain management (SSCM) has evolved from a niche concern
+into a central research domain within operations and supply chain management
+\citep{carter2008framework, seuring2008sustainability}.  SSCM is defined as
+``the strategic, transparent integration and achievement of an organization's
+social, environmental, and economic goals in the systemic coordination of key
+inter-organizational business processes for improving the long-term economic
+performance of the individual company and its supply chains''
+\citep[p.~1700]{carter2008framework}.
+
+The SSCM literature has examined a wide range of practices, including green
+purchasing, sustainable supplier development, reverse logistics, and circular
+economy initiatives \citep{govindan2015reverse, kirchherr2017conceptualizing}.
+More recently, scholars have emphasized the importance of extending
+sustainability efforts beyond the first tier of suppliers to the entire supply
+network \citep{wilhelm2016sustainability, villena2018missing}.
+
+A growing body of work explores the relationship between SSCM and firm
+performance.  Meta-analyses suggest that sustainable supply chain practices are
+positively associated with both environmental and economic performance, though
+the effects are moderated by contextual factors such as industry, region, and
+institutional environment \citep{golicic2013meta, govindan2020supply}.
+
+\subsection{Supply Chain Resilience}
+
+Supply chain resilience refers to ``the adaptive capability of the supply chain
+to prepare for unexpected events, respond to disruptions, and recover from them
+by maintaining continuity of operations at desired levels of connectedness and
+control over structure and function'' \citep[p.~131]{ponomarov2009understanding}.
+The resilience literature has identified a range of capabilities and strategies,
+including redundancy, flexibility, visibility, collaboration, and agility
+\citep{pettit2010ensuring, christopher2004building, scholten2015role}.
+
+Recent research has shifted from a reactive view of resilience (bouncing back
+after disruptions) toward a more proactive, capability-based perspective
+\citep{wieland2021two, ali2017analyzing}.  This evolution recognizes that
+resilience is not merely about recovery but about building the capacity to
+anticipate, adapt to, and even thrive amid change
+\citep{ivanov2019global, hosseini2019review}.
+
+However, the resilience literature has been criticized for its limited attention
+to sustainability dimensions.  Most resilience frameworks focus exclusively on
+operational and economic performance, overlooking the environmental and social
+implications of resilience-building strategies \citep{negri2021integrating,
+fahimnia2015quantitative}.
+
+\subsection{Cross-Border Supply Chain Operations}
+
+Cross-border supply chains introduce additional layers of complexity that
+distinguish them from domestic operations.  Institutional theory suggests that
+firms operating across borders must navigate different regulatory, normative,
+and cognitive institutional environments \citep{kostova1999transnational,
+busse2017managing}.  These institutional differences affect everything from
+supplier selection and relationship management to logistics and compliance
+\citep{hofmann2018sustainability}.
+
+The ``liability of foreignness'' \citep{zaheer1995overcoming} manifests in
+supply chain contexts through challenges such as cultural misunderstandings,
+differences in business practices, and varying levels of institutional trust
+\citep{handfield2002applying, jia2018global}.  These challenges are particularly
+salient for sustainability initiatives, which often require deep collaboration
+and information sharing across cultural and institutional boundaries
+\citep{busato2015sustainability, ehrgott2013environmental}.
+
+Cross-border supply chains also face unique risks, including currency
+fluctuations, trade policy changes, customs delays, and geopolitical instability
+\citep{manuj2008global, christopher2011approaches}.  The intersection of these
+risks with sustainability pressures creates a complex landscape for supply chain
+managers \citep{giannakis2016supply}.
+
+\subsection{Integrating Sustainability and Resilience}
+
+Recent scholarship has begun to explore the nexus between sustainability and
+resilience in supply chains.  \citet{fahimnia2015quantitative} proposed that
+green supply chain practices can enhance resilience by diversifying sourcing
+options and reducing dependence on environmentally risky suppliers.
+\citet{negri2021integrating} developed a conceptual model linking circular
+economy principles to resilience capabilities, arguing that circular strategies
+such as remanufacturing and recycling can serve as buffers against supply
+disruptions.
+
+However, tensions between sustainability and resilience objectives have also
+been identified.  For example, the efficiency-oriented logic of lean supply
+chains --- often associated with both cost reduction and environmental benefits
+through waste elimination --- can conflict with the redundancy and slack
+resources needed for resilience \citep{ivanov2017lean}.  Similarly, the
+localization of supply chains, often advocated on sustainability grounds, may
+reduce the flexibility benefits of global sourcing \citep{wieland2021two}.
+
+Table~\ref{tab:literature} summarizes key studies at the
+sustainability--resilience interface in supply chain research.
+
+\begin{table}[htbp]
+\centering
+\caption{Selected Studies at the Sustainability--Resilience Interface}
+\label{tab:literature}
+\begin{tabular}{@{}p{3cm}p{4cm}p{3cm}p{3cm}@{}}
+\toprule
+\textbf{Study} & \textbf{Focus} & \textbf{Key Finding} & \textbf{Context} \\
+\midrule
+\citet{fahimnia2015quantitative} & Green SC practices and resilience & Green practices enhance disruption absorption & Single-country \\
+\citet{negri2021integrating} & Circular economy and resilience & Circularity creates buffers against disruption & Conceptual \\
+\citet{govindan2020supply} & SSCM and performance & Sustainability moderates disruption impact & Multi-industry \\
+\citet{sabouhi2021resilient} & Resilient-sustainable network design & Trade-offs between cost and sustainability & Mathematical modeling \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+As Table~\ref{tab:literature} illustrates, existing research has largely focused
+on single-country contexts or conceptual modeling.  Empirical research on the
+sustainability--resilience nexus in cross-border supply chains remains scarce,
+motivating the present study.
+
+% ============================================================
+\section{Research Methodology}
+\label{sec:methodology}
+
+\subsection{Research Design}
+
+We adopted a multi-stakeholder, comparative case study design
+\citep{yin2018case, eisenhardt1989building} to investigate the
+sustainability--resilience nexus in cross-border supply chains.  The case study
+method is particularly appropriate for exploring complex, context-dependent
+phenomena where existing theory is underdeveloped \citep{eisenhardt2007theory}.
+
+\subsection{Case Selection}
+
+Twelve multinational enterprises were selected through theoretical sampling
+\citep{glasser1967discovery} to ensure variation across key dimensions:
+geographic scope, industry sector, and SSCM maturity.  The cases span two major
+trade corridors:
+
+\begin{enumerate}
+  \item \textbf{Asia--Europe Corridor} (7 cases): Firms with supply networks
+        connecting manufacturing bases in China, Vietnam, and India with
+        European markets, primarily in the automotive, electronics, and textile
+        sectors.
+  \item \textbf{Asia--North America Corridor} (5 cases): Firms with supply
+        networks connecting Asia-Pacific production hubs with North American
+        markets, spanning consumer goods, industrial equipment, and
+        pharmaceutical sectors.
+\end{enumerate}
+
+Table~\ref{tab:cases} provides an overview of the case organizations.
+
+\begin{table}[htbp]
+\centering
+\caption{Overview of Case Organizations}
+\label{tab:cases}
+\begin{tabular}{@{}p{2.5cm}p{2.5cm}p{2.5cm}p{2cm}p{3cm}@{}}
+\toprule
+\textbf{Firm} & \textbf{Sector} & \textbf{Employees} & \textbf{Corridor} & \textbf{SSCM Maturity} \\
+\midrule
+AutoCorp & Automotive & 25,000+ & Asia--Europe & High \\
+ElectroTech & Electronics & 12,000 & Asia--Europe & Medium \\
+TextileGroup & Textiles & 8,000 & Asia--Europe & Low \\
+PharmaMed & Pharmaceuticals & 15,000 & Asia--NA & High \\
+ConsumerGoods & Consumer Goods & 30,000+ & Asia--NA & Medium \\
+& $\cdots$ (6 additional cases) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Data Collection}
+
+Data were collected between January 2024 and December 2025 through multiple
+sources to enable triangulation \citep{jackson1986approaches}:
+
+\begin{itemize}
+  \item \textbf{Semi-structured interviews}: 96 interviews were conducted with
+        supply chain directors, sustainability managers, procurement heads, and
+        key supplier representatives (8 per case firm).  Each interview lasted
+        45--90 minutes.
+  \item \textbf{Document analysis}: Internal documents including sustainability
+        reports, supplier codes of conduct, risk assessment frameworks, and
+        disruption response plans.
+  \item \textbf{Site visits}: Researchers conducted 24 site visits to
+        manufacturing facilities, distribution centers, and supplier sites
+        across six countries.
+  \item \textbf{Archival data}: Publicly available data on disruptions, trade
+        flows, and regulatory changes affecting the case firms' supply chains.
+\end{itemize}
+
+\subsection{Data Analysis}
+
+We followed the Gioia methodology for qualitative data analysis
+\citep{gioia2013seeking}, proceeding through three stages: (1) first-order
+analysis identifying informant-centric concepts, (2) second-order analysis
+developing researcher-centric themes, and (3) aggregation into theoretical
+dimensions.  NVivo 14 was used for data management and coding.  Cross-case
+analysis employed pattern-matching logic \citep{yin2018case} to identify
+commonalities and differences across cases.
+
+% ============================================================
+\section{Findings}
+\label{sec:findings}
+
+Our analysis identified four critical capabilities that enable firms to
+simultaneously pursue sustainability and resilience objectives in cross-border
+supply chains.  We present each capability below, illustrated with evidence
+from the case studies.
+
+\subsection{Capability 1: Multi-Tier Visibility and Traceability}
+
+The ability to see beyond first-tier suppliers emerged as a foundational
+capability for sustainable cross-border resilience.  Firms with high SSCM
+maturity had invested in digital traceability systems that provided real-time
+visibility into the environmental and social performance of sub-tier suppliers.
+
+As the Supply Chain Director of AutoCorp explained:
+
+\begin{quote}
+\itshape
+``During the 2024 semiconductor shortage, our upstream visibility --- right down
+to the raw material level --- was what saved us.  We knew exactly which
+sub-tier suppliers were at risk and could redirect orders before production
+lines stopped.  That same visibility also ensures our conflict minerals
+compliance across 14 countries.''
+\end{quote}
+
+Firms with lower visibility maturity relied on manual supplier surveys and
+third-party audits, which proved inadequate for rapid disruption response.
+Table~\ref{tab:visibility} summarizes the relationship between visibility
+maturity and resilience outcomes.
+
+\begin{table}[htbp]
+\centering
+\caption{Multi-Tier Visibility and Resilience Outcomes}
+\label{tab:visibility}
+\begin{tabular}{@{}p{3cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}@{}}
+\toprule
+& \multicolumn{4}{c}{\textbf{Visibility Maturity}} \\
+\cmidrule(lr){2-5}
+\textbf{Outcome} & \textbf{Low} & \textbf{Medium} & \textbf{High} \\
+\midrule
+Disruption detection time & 12--48 hours & 4--12 hours & <4 hours \\
+Recovery time (days) & 14--30 & 7--14 & 3--7 \\
+Supplier compliance rate & 62\% & 78\% & 94\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Capability 2: Adaptive Circular Sourcing}
+
+Circular economy practices --- including closed-loop supply chains,
+remanufacturing, and recycled material sourcing --- served dual sustainability
+and resilience functions.  Firms with established circular sourcing networks
+were able to pivot to secondary material sources when primary supply was
+disrupted.
+
+PharmaMed's experience during the 2024 trade restrictions illustrated this
+dynamic:
+
+\begin{quote}
+\itshape
+``When our primary solvent supplier in [Country X] was sanctioned, our
+investment in chemical recovery and recycling systems meant we could maintain
+70\% of production capacity using recovered solvents, while we qualified an
+alternative supplier.  Without circularity, we would have faced a complete
+shutdown.''
+\end{quote}
+
+Cross-case analysis revealed three circular sourcing strategies associated with
+enhanced resilience: (1) closed-loop material recovery within the firm's own
+operations, (2) industrial symbiosis networks with co-located firms, and
+(3) certified secondary material markets.
+
+\subsection{Capability 3: Collaborative Risk Governance}
+
+Cross-border supply chains operate across institutional boundaries, making
+collaborative risk governance essential.  Our analysis identified three
+governance mechanisms that were particularly effective:
+
+\textbf{Multi-stakeholder risk councils}.  Six case firms had established formal
+risk councils comprising representatives from procurement, sustainability,
+legal, and key supplier organizations.  These councils met quarterly to assess
+emerging risks and coordinate response strategies.
+
+\textbf{Institutional bridging}.  Successful firms employed ``institutional
+bridging'' strategies --- deploying personnel with deep understanding of both
+home and host country institutional environments to facilitate communication
+and build trust across borders.
+
+\textbf{Contractual-relational hybrid governance}.  Following
+\citet{cao2015revisiting}, we observed that firms combined formal contractual
+mechanisms (e.g., sustainability clauses, disruption recovery SLAs) with
+relational mechanisms (e.g., joint problem-solving, information sharing) to
+govern cross-border supplier relationships.  The balance shifted toward
+relational governance as institutional distance increased.
+
+Table~\ref{tab:governance} maps governance mechanisms to institutional contexts.
+
+\begin{table}[htbp]
+\centering
+\caption{Governance Mechanisms Across Institutional Contexts}
+\label{tab:governance}
+\begin{tabular}{@{}p{2.5cm}p{3cm}p{3cm}p{3cm}@{}}
+\toprule
+\textbf{Institutional Distance} & \textbf{Dominant Mechanism} & \textbf{Secondary Mechanism} & \textbf{Example} \\
+\midrule
+Low (e.g., EU--EU) & Contractual & Relational & Detailed SLAs \\
+Medium (e.g., EU--China) & Hybrid & Relational & Framework agreements \\
+High (e.g., EU--SE Asia) & Relational & Contractual & Joint risk councils \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Capability 4: Digital-Enabled Ecosystem Orchestration}
+
+The most advanced firms in our sample had evolved from managing dyadic
+supplier relationships to orchestrating multi-stakeholder ecosystems.  Digital
+platforms served as the backbone for this orchestration, enabling:
+
+\begin{itemize}
+  \item \textbf{Real-time risk sensing}: AI-powered monitoring of geopolitical,
+        environmental, and supplier financial risk indicators across the supply
+        network.
+  \item \textbf{Collaborative planning}: Cloud-based platforms for joint demand
+        forecasting, capacity planning, and inventory optimization with key
+        suppliers.
+  \item \textbf{Sustainability analytics}: Automated tracking of carbon
+        footprint, water usage, and social compliance metrics across all tiers.
+\end{itemize}
+
+ElectroTech's Chief Procurement Officer described their ecosystem approach:
+
+\begin{quote}
+\itshape
+``We've moved from a hub-and-spoke model to a true ecosystem.  Our digital
+platform connects 340 suppliers across 18 countries.  When Typhoon Yagi hit
+Vietnam in 2024, the platform automatically identified affected suppliers,
+calculated impact on our production schedule, and suggested alternative sourcing
+options --- all within two hours.  Five years ago, that same process would have
+taken two weeks.''
+\end{quote}
+
+% ============================================================
+\section{Integrated Framework: The SCORE Model}
+\label{sec:framework}
+
+Synthesizing our findings, we propose the \textbf{SCORE Model} --- Sustainable
+Cross-border Operational Resilience Ecosystem --- an integrated framework
+comprising five dimensions (Figure~\ref{fig:framework}):
+
+\begin{enumerate}
+  \item \textbf{Sensing}: Multi-tier visibility and early warning systems
+        enabled by digital technologies.
+  \item \textbf{Circularity}: Closed-loop material flows and adaptive sourcing
+        that provide redundancy without sacrificing sustainability.
+  \item \textbf{Orchestration}: Ecosystem-level coordination across
+        institutional boundaries using digital platforms.
+  \item \textbf{Responsiveness}: Agile decision-making and rapid resource
+        reconfiguration capabilities.
+  \item \textbf{Embeddedness}: Deep integration of sustainability values into
+        organizational culture and supplier relationships.
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\fbox{%
+  \parbox{0.8\textwidth}{%
+    \centering
+    \vspace{2.5cm}
+    \textbf{[Insert Figure 1: The SCORE Framework]}\\[3mm]
+    \small Five dimensions: Sensing $\rightarrow$ Circularity $\rightarrow$
+    Orchestration $\rightarrow$ Responsiveness $\rightarrow$ Embeddedness\\
+    with cross-border institutional context as a moderating layer
+    \vspace{2.5cm}
+  }%
+}
+\caption{The SCORE Framework for Sustainable Cross-Border Resilience}
+\label{fig:framework}
+\end{figure}
+
+The framework emphasizes that these five dimensions are mutually reinforcing
+rather than independent.  For example, sensing capabilities (dimension 1)
+enable more effective circular sourcing (dimension 2) by identifying
+opportunities for material recovery and reuse.  Similarly, ecosystem
+orchestration (dimension 3) depends on the trust and shared values built through
+cultural embeddedness (dimension 5).
+
+Table~\ref{tab:maturity} presents a maturity model that helps firms assess their
+current position and identify development priorities for each SCORE dimension.
+
+\begin{table}[htbp]
+\centering
+\caption{SCORE Maturity Model}
+\label{tab:maturity}
+\begin{tabular}{@{}p{2cm}p{3.5cm}p{3.5cm}p{3.5cm}@{}}
+\toprule
+\textbf{Dimension} & \textbf{Level 1: Reactive} & \textbf{Level 2: Proactive} & \textbf{Level 3: Regenerative} \\
+\midrule
+Sensing & Manual reporting, delayed detection & Automated monitoring, Tier-2 visibility & AI-driven, full-network transparency \\
+Circularity & Basic recycling, waste reduction & Closed-loop systems, secondary markets & Industrial symbiosis, regenerative design \\
+Orchestration & Dyadic relationships & Multi-tier coordination & Ecosystem co-creation \\
+Responsiveness & Ad-hoc crisis response & Pre-defined contingency plans & Autonomous adaptation \\
+Embeddedness & Compliance-driven & Values-aligned & Purpose-driven culture \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Theoretical Implications}
+
+This study makes three principal theoretical contributions to the supply chain
+management literature.
+
+First, we extend resilience theory by demonstrating that sustainability
+practices are not merely compatible with resilience --- they are enabling
+mechanisms.  Specifically, circular economy practices create structural
+redundancy (multiple material sources) without the economic penalties typically
+associated with redundancy strategies.  This finding challenges the prevailing
+assumption in the resilience literature that redundancy and efficiency are
+inherent trade-offs \citep{ivanov2017lean, pettit2019resilience}.
+
+Second, we contribute to institutional theory in supply chain contexts by
+showing how institutional distance moderates the relationship between SSCM and
+resilience.  Our finding that relational governance becomes more important as
+institutional distance increases extends \citet{cao2015revisiting}'s work on
+governance complementarity to the cross-border domain.
+
+Third, we advance the SSCM literature by specifying the mechanisms through which
+sustainability investments generate resilience benefits.  Rather than
+treating sustainability as a constraint on supply chain operations
+\citep{seuring2013review}, our framework positions it as a strategic
+capability that enhances the adaptive capacity of cross-border supply networks.
+
+\subsection{Practical Implications}
+
+For supply chain managers, our findings offer several actionable insights:
+
+\begin{enumerate}
+  \item \textbf{Invest in multi-tier visibility as a dual-purpose capability}.
+        Digital traceability systems that serve sustainability compliance
+        objectives (e.g., conflict minerals reporting, carbon accounting) also
+        provide the visibility needed for rapid disruption detection and
+        response.
+  \item \textbf{Develop circular sourcing as a resilience strategy}.
+        Circular economy initiatives should be evaluated not only for their
+        environmental benefits but also for their potential to create
+        alternative material sources that buffer against supply disruptions.
+  \item \textbf{Adopt ecosystem-level governance for cross-border resilience}.
+        Moving beyond dyadic supplier management to multi-stakeholder ecosystem
+        orchestration enables more comprehensive risk assessment and coordinated
+        response across institutional boundaries.
+  \item \textbf{Use the SCORE maturity model} (Table~\ref{tab:maturity}) to
+        benchmark current capabilities and prioritize development investments
+        across the five dimensions.
+\end{enumerate}
+
+% ============================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+This study investigated how sustainable supply chain management practices can
+enhance resilience in cross-border supply networks.  Through a multi-stakeholder
+case study of 12 multinational enterprises, we identified four critical
+capabilities --- multi-tier visibility, adaptive circular sourcing,
+collaborative risk governance, and digital-enabled ecosystem orchestration ---
+and synthesized them into the SCORE framework.
+
+Our findings suggest that sustainability and resilience, far from being
+competing objectives, can be mutually reinforcing in cross-border contexts.
+Firms that have invested in SSCM capabilities are better positioned to detect,
+respond to, and recover from supply chain disruptions while maintaining
+environmental and social performance.
+
+\subsection{Limitations and Future Research}
+
+Several limitations should be acknowledged.  First, our case selection focused
+on two specific trade corridors (Asia--Europe and Asia--North America); future
+research should examine whether our findings generalize to other corridors such
+as Africa--Asia or Latin America--North America.  Second, our study captured a
+specific temporal window (2024--2025); longitudinal research is needed to
+understand how the sustainability--resilience relationship evolves over time.
+Third, while our qualitative design provides rich insights into mechanisms and
+processes, quantitative testing of the SCORE framework's propositions would
+strengthen its generalizability.
+
+Future research could also explore the role of emerging technologies ---
+particularly blockchain for supply chain transparency and artificial
+intelligence for predictive risk management --- in enabling sustainable
+cross-border resilience.  Additionally, the human and organizational dimensions
+of the sustainability--resilience nexus, including the role of leadership,
+culture, and change management, warrant deeper investigation.
+
+\bibliography{references}
+
+\end{document}
